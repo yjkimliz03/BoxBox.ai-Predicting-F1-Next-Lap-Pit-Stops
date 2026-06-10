@@ -89,7 +89,7 @@ Public-leaderboard ROC-AUC (Kaggle submissions):
 
 | Model | Type | Kaggle AUC |
 |---|---|---|
-| Logistic Regression | Linear | — *(linear baseline)* |
+| Logistic Regression | Linear | 0.86961 |
 | Random Forest | Tree | 0.91876 |
 | **XGBoost** | Tree | **0.94916** |
 | LightGBM | Tree | 0.94547 |
