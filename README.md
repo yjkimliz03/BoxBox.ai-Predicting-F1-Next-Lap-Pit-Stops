@@ -3,9 +3,9 @@
 **Deep Learning Course Project — Handong Global University**
 
 | Member | ID | Email | Models |
-|---|---|---|---|
-| **Yujin Kim** | 22631002 | yujin.kim@handong.ac.kr | MLP, FT-Transformer, LightGBM |
-| **Heeseo Jeong** | 22631008 | heeseo@handong.ac.kr | Logistic Regression, Random Forest, XGBoost |
+|---|---|---|
+| **Yujin Kim** | 22631002 | yujin.kim@handong.ac.kr |
+| **Heeseo Jeong** | 22631008 | heeseo@handong.ac.kr |
 
 Predicting whether a Formula 1 driver will pit **on the next lap** from per-lap telemetry, framed as a binary classification problem on the
 [Kaggle Playground Series S6E5](https://www.kaggle.com/competitions/playground-series-s6e5) dataset.
