@@ -39,7 +39,7 @@ Raw features include categorical identity (`Driver` 887, `Compound` 5, `Race` 26
 
 *(See [`notebooks/EDA.ipynb`](notebooks/EDA.ipynb) and figures in [`results/figures/`](results/figures).)*
 
-### 3.2 Feature Engineering (FE39)
+### 3.2 Feature Engineering
 We expand the 10 raw numerics to **39 numeric features**, grouped around five questions a driver actually asks. All are **leak-free** (deterministic transforms or non-target statistics).
 
 | Question | Representative features |
@@ -47,8 +47,8 @@ We expand the 10 raw numerics to **39 numeric features**, grouped around five qu
 | 🏁 *Is the race almost over?* | `laps_remaining` (recovered via `total_laps = LapNumber / RaceProgress`), `laps_remaining_frac` |
 | 🛞 *How worn are the tyres?* | `deg_rate`, `tyrelife_vs_compound_q90`, `tyrelife_x_hardness` |
 | ⏱️ *Slower than usual?* | `laptime_vs_race_median`, `laptime_ratio_race` |
-| ♟️ *Strategic moment?* | `is_leader`, `lost_positions`, `stint_x_progress` |
-| 🧑‍✈️ *Who & where?* | driver-race aggregates (`grp_*`), frequency encodings (`Driver_freq`, `Race_freq`) |
+| 🎲 *Strategic moment?* | `is_leader`, `lost_positions`, `stint_x_progress` |
+| ♟️ *Who & where?* | driver-race aggregates (`grp_*`), frequency encodings (`Driver_freq`, `Race_freq`) |
 
 The signature trick: total race length is not given, but `RaceProgress = LapNumber / total_laps`, so we **invert it** to recover `laps_remaining` — a strong predictor, since drivers rarely pit near the finish. See [`features.py`](features.py) for the full, reproducible definition.
 
@@ -142,7 +142,3 @@ BoxBoxAI/
 The feature-engineered datasets are committed **gzipped** (`data/*.csv.gz`) to stay within
 GitHub's file-size limits; `pandas.read_csv` reads them directly. To regenerate from the raw
 Kaggle CSVs, place `train.csv` / `test.csv` in `data/` and run `python features.py`.
-
-## Contributions
-* **Yujin Kim** — MLP, FT-Transformer, LightGBM; feature engineering (FE39); repository integration.
-* **Heeseo Jeong** — Logistic Regression, Random Forest, XGBoost; EDA; unified pipeline framework.
