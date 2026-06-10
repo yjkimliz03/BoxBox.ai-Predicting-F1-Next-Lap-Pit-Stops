@@ -82,7 +82,6 @@ python run.py --model xgboost --tune       # Optuna tuning on fold 0
 python run.py --model mlp --dry-run         # fast correctness check (2k samples)
 ```
 
-Hardware: NVIDIA RTX 3080 (XGBoost/MLP/FT use GPU when available).
 
 ## 5. Results & Analysis
 
