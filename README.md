@@ -2,7 +2,7 @@
 
 **Deep Learning Course Project — Handong Global University**
 
-| Member | ID | Email | Models |
+| Member | ID | Email |
 |---|---|---|
 | **Yujin Kim** | 22631002 | yujin.kim@handong.ac.kr |
 | **Heeseo Jeong** | 22631008 | heeseo@handong.ac.kr |
